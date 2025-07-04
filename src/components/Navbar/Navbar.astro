@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets'
+import DesktopNav from './DesktopNav.astro'
+import MobileMenuContent from './MobileMenuContent.astro'
+import MobileNav from './MobileNav.astro'
+import logo from '../../../public/images/primakara-logo-removebg-preview-text.png'
+---
+
+<div
+	class="bg-white-bg absolute top-0 right-0 z-10 flex h-20 w-full items-center justify-between px-5 md:h-25 md:px-10 lg:px-15 xl:px-25"
+>
+	<div class="relative flex h-full max-w-50 items-center justify-center md:max-w-60">
+		<Image alt={'logo'} src={logo} />
+	</div>
+	<MobileNav />
+	<DesktopNav />
+</div>
+<MobileMenuContent />

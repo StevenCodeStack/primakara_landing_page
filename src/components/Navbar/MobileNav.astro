@@ -1,0 +1,67 @@
+<button class="menu-toggle lg:hidden" aria-label="Menu">
+	<span class="hamburger"></span>
+</button>
+
+<script>
+	const menuButton = document.querySelector('.menu-toggle')
+	const content = document.querySelector('#menuContent')
+	menuButton?.addEventListener('click', () => {
+		content?.classList.toggle('menuOpen')
+		menuButton.classList.toggle('active')
+	})
+</script>
+
+<style>
+	/* Base Styles */
+	.menu-toggle {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 12px;
+		outline: none;
+		position: relative;
+		width: 20px;
+		height: 40px;
+	}
+
+	/* Hamburger Bars */
+	.hamburger,
+	.hamburger::before,
+	.hamburger::after {
+		content: '';
+		display: block;
+		background: #333;
+		height: 3px;
+		width: 100%;
+		border-radius: 3px;
+		transition: all 0.3s ease;
+		position: absolute;
+		left: 0;
+	}
+
+	.hamburger {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.hamburger::before {
+		top: -8px;
+	}
+
+	.hamburger::after {
+		top: 8px;
+	}
+
+	/* Active State (X Shape) */
+	.menu-toggle.active .hamburger {
+		background: transparent;
+	}
+
+	.menu-toggle.active .hamburger::before {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.menu-toggle.active .hamburger::after {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+</style>

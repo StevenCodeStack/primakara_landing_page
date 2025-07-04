@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #1dcad3;
+	--color-bg: #021729;
+	--color-secondary-bg: #032038;
+	--color-lighter-bg: #052742;
+	/* --color-white-bg: #cae7ff; */
+	--color-white-bg: #edfeff;
+}
+body {
+	@apply bg-secondary-bg;
+}
+
+.menuOpen {
+	@apply left-[-100%];
+}
+
+.hideScrollbar {
+	scrollbar-width: none;
+}
+
+.hoverNav {
+	@apply relative;
+}
+
+.hoverNav::before {
+	content: '';
+	@apply bg-bg absolute -bottom-1 h-1 w-0 transition-all duration-500;
+}
+
+.hoverNav:hover::before {
+	@apply w-full;
+}

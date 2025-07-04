@@ -1,0 +1,42 @@
+---
+import { ChevronRight } from '@lucide/astro'
+const navLinks = [
+	{ title: 'Beranda', link: '/' },
+	{ title: 'Pendidikan', link: '/' },
+	{ title: 'Tentang Kami', link: '/' },
+	{ title: 'Kehidupan Kampus', link: '/' },
+	{ title: 'Riset & Pengabdian', link: '/' },
+	{ title: 'Penerimaan', link: '/' }
+]
+const addLinks = [
+	{ title: 'Mahasiswa', link: '/' },
+	{ title: 'Fasilitas', link: '/' },
+	{ title: 'Berita & Kegiatan', link: '/' },
+	{ title: 'Kontak', link: '/' }
+]
+---
+
+<div
+	id="menuContent"
+	class="menuOpen hideScrollbar bg-secondary-bg absolute top-0 left-0 z-1 h-[100dvh] w-[100dvw] overflow-auto pt-20 text-white transition-all md:pt-25 lg:hidden"
+>
+	<div class="grid grid-cols-1 px-5">
+		{
+			navLinks.map((e) => (
+				<div class="flex items-center justify-between border-b border-black py-5">
+					<p class="font-semibold md:text-xl">{e.title}</p>
+					<ChevronRight />
+				</div>
+			))
+		}
+	</div>
+	<div class="bg-lighter-bg px-5 py-5">
+		{
+			addLinks.map((e) => (
+				<div class="flex items-center justify-between py-2 md:py-3">
+					<p class="md:text-xl">{e.title}</p>
+				</div>
+			))
+		}
+	</div>
+</div>
