@@ -1,0 +1,38 @@
+---
+import PersentasePie from './PersentasePie.astro'
+---
+
+<div class="text-center">
+	<h1 class="text-5xl font-semibold">KEPASTIAN <span class="text-primary">MASA DEPAN</span></h1>
+	<p class="mx-auto mt-10 w-[90%] text-2xl md:w-[70%] md:text-3xl">
+		Menjadi mahasiswa tetap relevan di tengah perubahan besar akibat revolusi industri 4.0 dan
+		gelombang ekonomi digital
+	</p>
+	<div class="mt-16 grid grid-cols-1 place-items-center gap-20 lg:grid-cols-2">
+		<div class="w-100">
+			<PersentasePie percentage={94.8} />
+			<p class="mt-5 text-3xl">
+				<span class="text-primary">Lulusan Primakara</span> bekerja secara layak. Gaji diatas 1.2 kali
+				UMR
+			</p>
+		</div>
+		<div class="w-100">
+			<PersentasePie percentage={77.75} />
+			<p class="mt-5 text-3xl">
+				<span class="text-primary">Lulusan Primakara</span> bekerja sesuai bidang studi
+			</p>
+		</div>
+		<div class="w-100">
+			<PersentasePie percentage={69.2} />
+			<p class="mt-5 text-3xl">
+				<span class="text-primary">Lulusan Primakara</span> sudah bekerja sebelum wisuda
+			</p>
+		</div>
+		<div class="w-100">
+			<PersentasePie percentage={19.05} />
+			<p class="mt-5 text-3xl">
+				<span class="text-primary">Lulusan Primakara</span> menjadi pengusaha digital (technopreneur)
+			</p>
+		</div>
+	</div>
+</div>
