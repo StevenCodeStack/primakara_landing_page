@@ -4,21 +4,23 @@ const { percentage = 0 } = Astro.props
 
 <div class="relative m-auto">
 	<svg class="h-full w-full -rotate-90 transform" viewBox="0 0 120 120">
-		<circle cx="60" cy="60" r="50" fill="none" stroke="#edfeff" stroke-width="20"></circle>
+		<circle cx="60" cy="60" r="50" fill="none" stroke="#edfeff" stroke-width="16"></circle>
 		<circle
 			cx="60"
 			cy="60"
 			r="50"
 			fill="none"
 			stroke="#1dcad3"
-			stroke-width="20"
+			stroke-width="16"
 			stroke-dasharray="314.16"
 			stroke-dashoffset={314.16 * (1 - percentage / 100)}
 			stroke-linecap="round"></circle>
 	</svg>
 
 	<!-- Text centered inside -->
-	<div class="text-primary absolute inset-0 flex items-center justify-center text-6xl font-bold">
+	<div
+		class="text-primary absolute inset-0 flex items-center justify-center text-5xl font-bold md:text-6xl"
+	>
 		{percentage.toFixed(2)}%
 	</div>
 </div>
