@@ -13,7 +13,7 @@ body {
 }
 
 .menuOpen {
-	@apply left-[-100%];
+	@apply left-[-120%];
 }
 
 .hideScrollbar {
