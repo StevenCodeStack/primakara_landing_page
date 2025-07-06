@@ -1,19 +1,7 @@
 ---
 import { ChevronRight } from '@lucide/astro'
-const navLinks = [
-	{ title: 'Beranda', link: '/' },
-	{ title: 'Pendidikan', link: '/' },
-	{ title: 'Tentang Kami', link: '/' },
-	{ title: 'Kehidupan Kampus', link: '/' },
-	{ title: 'Riset & Pengabdian', link: '/' },
-	{ title: 'Penerimaan', link: '/' }
-]
-const addLinks = [
-	{ title: 'Mahasiswa', link: '/' },
-	{ title: 'Fasilitas', link: '/' },
-	{ title: 'Berita & Kegiatan', link: '/' },
-	{ title: 'Kontak', link: '/' }
-]
+
+import { addNav, mobileNav } from './LinksData'
 ---
 
 <div
@@ -22,7 +10,7 @@ const addLinks = [
 >
 	<div class="grid grid-cols-1 px-5">
 		{
-			navLinks.map((e) => (
+			mobileNav.map((e) => (
 				<div class="flex items-center justify-between border-b border-black py-5">
 					<p class="font-semibold md:text-xl">{e.title}</p>
 					<ChevronRight />
@@ -32,7 +20,7 @@ const addLinks = [
 	</div>
 	<div class="bg-lighter-bg px-5 py-5">
 		{
-			addLinks.map((e) => (
+			addNav.map((e) => (
 				<div class="flex items-center justify-between py-2 md:py-3">
 					<p class="md:text-xl">{e.title}</p>
 				</div>

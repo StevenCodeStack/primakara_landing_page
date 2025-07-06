@@ -4,15 +4,32 @@ import DesktopNav from './DesktopNav.astro'
 import MobileMenuContent from './MobileMenuContent.astro'
 import MobileNav from './MobileNav.astro'
 import logo from '../../../public/images/primakara-logo-removebg-preview-text.png'
+import { addNav } from './LinksData'
 ---
 
-<div
-	class="bg-white-bg absolute top-0 right-0 z-10 flex h-20 w-full items-center justify-between px-5 md:h-25 md:px-10 lg:px-15 xl:px-25"
->
-	<div class="relative flex h-full max-w-50 items-center justify-center md:max-w-60">
-		<Image alt={'logo'} src={logo} />
+<div class="absolute top-0 right-0 z-10 w-full">
+	<div
+		class="bg-white-bg flex h-20 items-center justify-between px-5 shadow-2xl md:h-25 md:px-10 xl:px-25"
+	>
+		<div class="relative flex h-full max-w-50 items-center justify-center md:max-w-60">
+			<Image alt={'logo'} src={logo} />
+		</div>
+		<MobileNav />
+		<DesktopNav />
 	</div>
-	<MobileNav />
-	<DesktopNav />
+	<div class="bg-white-bg border-bg hidden h-8 items-center border-t md:px-10 lg:flex xl:px-25">
+		<div class="ml-auto flex gap-5">
+			{
+				addNav.map((e, i) => (
+					<>
+						<a href={e.link} class="text-sm text-nowrap 2xl:text-base">
+							{e.title}
+						</a>
+						{i !== addNav.length - 1 && <h1>|</h1>}
+					</>
+				))
+			}
+		</div>
+	</div>
 </div>
 <MobileMenuContent />
