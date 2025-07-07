@@ -2,13 +2,16 @@
 import { Image } from 'astro:assets'
 import PrimakaraBuilding from '../../../public/images/primakara_building.png'
 import Button from '../UI/button.astro'
+import Title from '../UI/Title.astro'
 ---
 
 <div class="">
-	<h1 class="md:max-w-auto m-auto max-w-[75%] text-center text-4xl font-semibold md:text-5xl">
+	<Title>
 		KENALI <span class="text-primary">PRIMAKARA UNIVERSITY</span>
-	</h1>
-	<div class="mt-8 flex flex-col justify-between gap-10 px-8 md:px-16 lg:flex-row">
+	</Title>
+	<div
+		class="mt-8 flex flex-col justify-between gap-10 px-8 md:gap-5 md:px-16 lg:flex-row lg:gap-15"
+	>
 		<div class="relative m-auto h-full max-w-[80%]">
 			<Image src={PrimakaraBuilding} alt={'Primakara Building'} />
 		</div>

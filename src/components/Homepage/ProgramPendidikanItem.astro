@@ -1,0 +1,27 @@
+---
+import ProgramPendidikanCard from './ProgramPendidikanCard.astro'
+import { Image } from 'astro:assets'
+
+interface Props {
+	image: ImageMetadata
+	data: string[] // Replace with actual type
+	reverse?: boolean // Optional prop
+	title: string
+}
+
+const { image, data, reverse = false, title } = Astro.props
+---
+
+<div
+	class={`bg-bg flex lg:h-100 w-full justify-between p-3 gap-5 lg:ap-10 ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex-col`}
+>
+	<div class="relative lg:w-1/2">
+		<Image alt={''} class="h-full max-h-80 w-full object-cover lg:max-h-full" src={image} />
+	</div>
+	<div class={`lg:w-1/2 p-5 ${reverse ? 'lg:pl-10' : 'lg:pr-10'}`}>
+		<h1 class="text-3xl font-semibold xl:text-4xl">{title}</h1>
+		<div class="mt-5 flex flex-col gap-3">
+			{data.map((e) => <ProgramPendidikanCard>{e}</ProgramPendidikanCard>)}
+		</div>
+	</div>
+</div>
