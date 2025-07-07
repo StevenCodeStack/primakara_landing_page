@@ -2,10 +2,12 @@
 import Button from './Button.astro'
 import { Phone, Mail, Instagram, Facebook, Youtube } from '@lucide/astro'
 import { dataInformatika, dataBisnis, desktopNav, addNav } from '../Navbar/LinksData'
+import PrimakaraLogo from '../../../public/images/primakara-logo-removebg-preview-text.png'
+import { Image } from 'astro:assets'
 ---
 
-<div class="bg-bg py-20">
-	<div class="globalLayout grid grid-cols-4 gap-20">
+<div class="bg-bg pt-20">
+	<div class="globalLayout grid grid-cols-2 gap-25 md:grid-cols-4">
 		<div class="">
 			<h1 class="text-xl font-bold">PRIMAKARA UNIVERSITY</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
@@ -52,6 +54,13 @@ import { dataInformatika, dataBisnis, desktopNav, addNav } from '../Navbar/Links
 			<div class="mt-8 flex flex-col gap-2 text-lg">
 				{addNav.map((e) => <a href={e.link}>{e.title}</a>)}
 			</div>
+		</div>
+	</div>
+	<div class="mt-10 border-t border-slate-600 py-6">
+		<div class="globalLayout flex items-center justify-between">
+			<Image src={PrimakaraLogo} alt="Primakara Logo" class="h-fit w-50 brightness-0 invert" />
+			<h1 class="">Copyright © 2023 Primakara University</h1>
+			<h1>Design by Nextap</h1>
 		</div>
 	</div>
 </div>
