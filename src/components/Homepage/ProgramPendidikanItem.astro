@@ -2,9 +2,14 @@
 import ProgramPendidikanCard from './ProgramPendidikanCard.astro'
 import { Image } from 'astro:assets'
 
+type data = {
+	title: string
+	link: string
+}
+
 interface Props {
 	image: ImageMetadata
-	data: string[] // Replace with actual type
+	data: data[] // Replace with actual type
 	reverse?: boolean // Optional prop
 	title: string
 }
@@ -21,7 +26,7 @@ const { image, data, reverse = false, title } = Astro.props
 	<div class={`lg:w-1/2 p-5 ${reverse ? 'lg:pl-10' : 'lg:pr-10'}`}>
 		<h1 class="text-3xl font-semibold xl:text-4xl">{title}</h1>
 		<div class="mt-5 flex flex-col gap-3">
-			{data.map((e) => <ProgramPendidikanCard>{e}</ProgramPendidikanCard>)}
+			{data.map((e) => <ProgramPendidikanCard link={e.link}>{e.title}</ProgramPendidikanCard>)}
 		</div>
 	</div>
 </div>

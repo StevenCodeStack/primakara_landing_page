@@ -4,23 +4,15 @@ import Title from '../UI/Title.astro'
 import ProgramPendidikanItem from './ProgramPendidikanItem.astro'
 import Informatika from '../../../public/images/informatika.jpg'
 import Bisnis from '../../../public/images/BISNIS.jpg'
-
-const dataInformatika = [
-	'Informatika',
-	'Sistem Informasi',
-	'Sistem Informasi Akuntansi',
-	'Desain Komunikasi Visual'
-]
-
-const dataBisnis = ['Akuntansi', 'Bisnis Digital', 'Manajemen']
+import { dataInformatika, dataBisnis } from '../Navbar/LinksData'
 ---
 
-<div class="">
+<div class="globalLayout">
 	<Title>
 		PROGRAM <span class="text-primary">PENDIDIKAN</span>
 	</Title>
 	<SubTitle>Menghadirkan 7 program studi dengan metode belajar yang cocok untuk mahasiswa</SubTitle>
-	<div class="mt-10 flex flex-col gap-10 px-5">
+	<div class="mt-10 flex flex-col gap-10">
 		<ProgramPendidikanItem
 			title="FAKULTAS TEKNOLOGI INFORMASI DAN DESIGN"
 			image={Informatika}

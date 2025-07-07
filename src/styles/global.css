@@ -32,3 +32,7 @@ body {
 .hoverNav:hover::before {
 	@apply w-full;
 }
+
+.globalLayout {
+	@apply mx-auto max-w-350 px-5 lg:px-20;
+}

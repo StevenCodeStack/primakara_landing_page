@@ -27,3 +27,16 @@ export const addNav = [
 	{ title: 'Berita & Kegiatan', link: '/' },
 	{ title: 'Kontak', link: '/' }
 ]
+
+export const dataInformatika = [
+	{ title: 'Informatika', link: '/' },
+	{ title: 'Sistem Informasi', link: '/' },
+	{ title: 'Sistem Informasi Akuntansi', link: '/' },
+	{ title: 'Desain Komunikasi Visual', link: '/' }
+]
+
+export const dataBisnis = [
+	{ title: 'Akuntansi', link: '/' },
+	{ title: 'Bisnis Digital', link: '/' },
+	{ title: 'Manajemen', link: '/' }
+]

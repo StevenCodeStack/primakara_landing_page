@@ -1,6 +1,16 @@
-<div class="bg-primary flex h-12 items-center gap-3 p-1">
-	<div class="bg-bg aspect-square h-full w-auto p-1 text-center text-xl font-semibold">S1</div>
-	<h1 class="text-bg md:ext-2xl text-xl font-semibold">
-		<slot />
-	</h1>
-</div>
+---
+interface Props {
+	link: string
+}
+
+const { link } = Astro.props
+---
+
+<a href={link}>
+	<div class="bg-primary flex h-12 items-center gap-3 p-1">
+		<div class="bg-bg aspect-square h-full w-auto p-1 text-center text-xl font-semibold">S1</div>
+		<h1 class="text-bg md:ext-2xl text-xl font-semibold">
+			<slot />
+		</h1>
+	</div>
+</a>

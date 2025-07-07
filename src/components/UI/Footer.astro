@@ -1,0 +1,57 @@
+---
+import Button from './Button.astro'
+import { Phone, Mail, Instagram, Facebook, Youtube } from '@lucide/astro'
+import { dataInformatika, dataBisnis, desktopNav, addNav } from '../Navbar/LinksData'
+---
+
+<div class="bg-bg py-20">
+	<div class="globalLayout grid grid-cols-4 gap-20">
+		<div class="">
+			<h1 class="text-xl font-bold">PRIMAKARA UNIVERSITY</h1>
+			<div class="mt-8 flex flex-col gap-2 text-lg">
+				<p class="">Jalan Tukad Badung No 135, Denpasar, Bali - 80226</p>
+				<Button>Lihat Maps</Button>
+				<div class="flex items-center gap-3">
+					<Phone />
+					<p>+62 361 895 6084</p>
+				</div>
+				<div class="flex items-center gap-3">
+					<Mail />
+					<p>info@primakara.ac.id</p>
+				</div>
+				<div class="flex gap-3">
+					<div class="border border-white p-2">
+						<Instagram class="h-6 w-6" />
+					</div>
+					<div class="border border-white p-2">
+						<Facebook class="h-6 w-6" />
+					</div>
+					<div class="border border-white p-2">
+						<Youtube class="h-6 w-6" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<h1 class="text-xl font-bold">PROGRAM STUDI</h1>
+			<div class="mt-8 flex flex-col gap-2 text-lg">
+				<h1 class="text-slate-400">Fakultas Teknologi Informasi dan Desain</h1>
+				{dataInformatika.map((e) => <a href={e.link}>{e.title}</a>)}
+				<h1 class="mt-5 text-slate-400">Fakultas Teknologi Informasi dan Desain</h1>
+				{dataBisnis.map((e) => <a href={e.link}>{e.title}</a>)}
+			</div>
+		</div>
+		<div class="">
+			<h1 class="text-xl font-bold">HALAMAN PENTING</h1>
+			<div class="mt-8 flex flex-col gap-2 text-lg">
+				{desktopNav.map((e) => <a href={e.link}>{e.title}</a>)}
+			</div>
+		</div>
+		<div class="">
+			<h1 class="text-xl font-bold">LINK TERKAIT</h1>
+			<div class="mt-8 flex flex-col gap-2 text-lg">
+				{addNav.map((e) => <a href={e.link}>{e.title}</a>)}
+			</div>
+		</div>
+	</div>
+</div>
