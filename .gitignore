@@ -25,4 +25,4 @@ pnpm-debug.log*
 
 .prettierignorea
 .prettierrc
-src/component/Homepage
+astro_tmp_pages_*

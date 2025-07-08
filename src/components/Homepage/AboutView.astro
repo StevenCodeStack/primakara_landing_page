@@ -3,29 +3,30 @@ import { Image } from 'astro:assets'
 import PrimakaraBuilding from '../../../public/images/primakara_building.png'
 import Button from '../UI/Button.astro'
 import Title from '../UI/Title.astro'
+import { getLocale } from 'astro-i18n-aut'
+import { loadTranslations } from '../../lib/i18n'
+
+const locale = getLocale(Astro.url)
+const { about } = await loadTranslations(locale)
+const { title, headline, description, button } = about
 ---
 
 <div class="bg-bg py-30">
 	<div class="globalLayout">
-		<Title>
-			KENALI <span class="text-primary">PRIMAKARA UNIVERSITY</span>
-		</Title>
+		<Title set:html={title} />
 		<div class="mt-8 flex flex-col justify-between gap-10 md:gap-5 lg:flex-row lg:gap-15">
 			<div class="relative m-auto h-full max-w-[80%]">
 				<Image src={PrimakaraBuilding} alt={'Primakara Building'} />
 			</div>
 			<div class="lg:max-w-1/2">
-				<h1 class="pr-10 text-4xl font-bold tracking-wide italic md:text-5xl lg:mt-20">
-					SATU-SATUNYA <span class="text-primary">UNIVERSITAS IT DI BALI</span>
-				</h1>
+				<h1
+					class="pr-10 text-4xl font-bold tracking-wide italic md:text-5xl lg:mt-20"
+					set:html={headline}
+				/>
 				<p class="mt-5 mb-10 text-justify text-lg sm:text-xl md:text-2xl">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque earum sint repudiandae
-					cumque, totam nesciunt ea explicabo quisquam, deleniti a, nisi ad obcaecati facilis.
-					Voluptates exercitationem sunt, blanditiis ad deleniti explicabo rerum reprehenderit
-					debitis cumque unde perspiciatis praesentium impedit atque necessitatibus totam expedita
-					consequuntur alias. Libero iusto doloribus ipsa officiis?
+					{description}
 				</p>
-				<Button>Selengkapnya</Button>
+				<Button>{button}</Button>
 			</div>
 		</div>
 	</div>

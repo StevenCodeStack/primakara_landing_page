@@ -4,7 +4,12 @@ import DesktopNav from './DesktopNav.astro'
 import MobileMenuContent from './MobileMenuContent.astro'
 import MobileNav from './MobileNav.astro'
 import logo from '../../../public/images/primakara-logo-removebg-preview-text.png'
-import { addNav } from './LinksData'
+import { getLocale } from 'astro-i18n-aut'
+import { loadTranslations } from '../../lib/i18n'
+import type { LinkType } from '../../types/types'
+
+const locale = getLocale(Astro.url)
+const { nav } = await loadTranslations(locale)
 ---
 
 <div class="absolute top-0 right-0 z-10 w-full">
@@ -20,12 +25,12 @@ import { addNav } from './LinksData'
 	<div class="bg-white-bg border-bg hidden h-8 items-center border-t md:px-10 lg:flex xl:px-25">
 		<div class="ml-auto flex gap-5">
 			{
-				addNav.map((e, i) => (
+				nav.addNav.map((e: LinkType, i: number) => (
 					<>
 						<a href={e.link} class="text-sm text-nowrap 2xl:text-base">
 							{e.title}
 						</a>
-						{i !== addNav.length - 1 && <h1>|</h1>}
+						{i !== nav.addNav.length - 1 && <h1>|</h1>}
 					</>
 				))
 			}

@@ -1,0 +1,86 @@
+{
+	"nav": {
+		"desktop": [
+			{ "title": "Pendidikan", "link": "/pendidikan" },
+			{
+				"title": "Tentang Kami",
+				"link": "/tentang-kami",
+				"children": [
+					{ "title": "Fasilitas", "link": "/fasilitas" },
+					{ "title": "Struktur Organisasi", "link": "/struktur" }
+				]
+			},
+			{ "title": "Kehidupan Kampus", "link": "/kampus" },
+			{ "title": "Riset & Pengabdian", "link": "/riset" }
+		],
+		"mobile": [
+			{ "title": "Beranda", "link": "/" },
+			{ "title": "Pendidikan", "link": "/" },
+			{ "title": "Tentang Kami", "link": "/" },
+			{ "title": "Kehidupan Kampus", "link": "/" },
+			{ "title": "Riset & Pengabdian", "link": "/" },
+			{ "title": "Penerimaan", "link": "/" }
+		],
+		"programs": {
+			"informatika": [
+				{ "title": "Informatika", "link": "/informatika" },
+				{ "title": "Sistem Informasi", "link": "/sistem-informasi" },
+				{ "title": "Sistem Informasi Akuntansi", "link": "/" },
+				{ "title": "Desain Komunikasi Visual", "link": "/" }
+			],
+			"bisnis": [
+				{ "title": "Akuntansi", "link": "/" },
+				{ "title": "Bisnis Digital", "link": "/" },
+				{ "title": "Manajemen", "link": "/" }
+			]
+		},
+		"addNav": [
+			{ "title": "Mahasiswa", "link": "/" },
+			{ "title": "Fasilitas", "link": "/" },
+			{ "title": "Berita & Kegiatan", "link": "/" },
+			{ "title": "Kontak", "link": "/" }
+		],
+		"button": "Penerimaan"
+	},
+	"home": {
+		"title": "RAIH SUKSES <span class='text-primary'>ERA DIGITAL</span>",
+		"subtitle": "Di Kampus IT Terbaik se-Bali dan Nusa Tenggara",
+		"info": "Berdasarkan Pemeriksaan DISTI Tahun 2020",
+		"button": "Selengkapnya"
+	},
+	"percentage": {
+		"title": "KEPASTIAN <span class='text-primary'>MASA DEPAN</span>",
+		"subtitle": "Menjadi mahasiswa tetap relevan di tengah perubahan besar akibat revolusi industri 4.0 dan gelombang ekonomi digital",
+		"data": [
+			{
+				"value": 94.8,
+				"description": "<span class='text-primary'>Lulusan Primakara</span> bekerja secara layak. Gaji diatas 1.2 kali UMR"
+			},
+			{
+				"value": 77.75,
+				"description": "<span class='text-primary'>Lulusan Primakara</span> bekerja sesuai bidang studi"
+			},
+			{
+				"value": 69.2,
+				"description": "<span class='text-primary'>Lulusan Primakara</span> sudah bekerja sebelum wisuda"
+			},
+			{
+				"value": 19.05,
+				"description": "<span class='text-primary'>Lulusan Primakara</span> menjadi pengusaha digital (technopreneur)"
+			}
+		],
+		"info": "Sumber Tracer Study Tahun 2023"
+	},
+	"about": {
+		"title": "KENALI <span class='text-primary'>PRIMAKARA UNIVERSITY</span>",
+		"headline": "SATU-SATUNYA <span class='text-primary'>UNIVERSITAS IT DI BALI</span>",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque earum sint repudiandae cumque, totam nesciunt ea explicabo quisquam, deleniti a, nisi ad obcaecati facilis. Voluptates exercitationem sunt, blanditiis ad deleniti explicabo rerum reprehenderit debitis cumque unde perspiciatis praesentium impedit atque necessitatibus totam expedita consequuntur alias. Libero iusto doloribus ipsa officiis?",
+		"button": "Selengkapnya"
+	},
+	"footer": {
+		"title1": "PRIMAKARA UNIVERSITY",
+		"title2": "PROGRAM STUDI",
+		"title3": "HALAMAN PENTING",
+		"title4": "LINK TERKAIT"
+	}
+}

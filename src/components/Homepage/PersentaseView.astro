@@ -1,43 +1,29 @@
 ---
+import { getLocale } from 'astro-i18n-aut'
 import SubTitle from '../UI/SubTitle.astro'
 import Title from '../UI/Title.astro'
 import PersentasePie from './PersentasePie.astro'
+import { loadTranslations } from '../../lib/i18n'
+
+const locale = getLocale(Astro.url)
+const { percentage } = await loadTranslations(locale)
+const { title, subtitle, data, info } = percentage
 ---
 
 <div class="globalLayout text-center">
-	<Title>
-		KEPASTIAN <span class="text-primary">MASA DEPAN</span>
-	</Title>
+	<Title set:html={title} />
 	<SubTitle>
-		Menjadi mahasiswa tetap relevan di tengah perubahan besar akibat revolusi industri 4.0 dan
-		gelombang ekonomi digital
+		{subtitle}
 	</SubTitle>
 	<div class="mt-16 grid grid-cols-1 place-items-center gap-20 lg:grid-cols-2">
-		<div class="w-75 md:w-80 2xl:w-100">
-			<PersentasePie percentage={94.8} />
-			<p class="mt-5 text-2xl md:text-3xl">
-				<span class="text-primary">Lulusan Primakara</span> bekerja secara layak. Gaji diatas 1.2 kali
-				UMR
-			</p>
-		</div>
-		<div class="w-75 md:w-80 2xl:w-100">
-			<PersentasePie percentage={77.75} />
-			<p class="mt-5 text-2xl md:text-3xl">
-				<span class="text-primary">Lulusan Primakara</span> bekerja sesuai bidang studi
-			</p>
-		</div>
-		<div class="w-75 md:w-80 2xl:w-100">
-			<PersentasePie percentage={69.2} />
-			<p class="mt-5 text-2xl md:text-3xl">
-				<span class="text-primary">Lulusan Primakara</span> sudah bekerja sebelum wisuda
-			</p>
-		</div>
-		<div class="w-75 md:w-80 2xl:w-100">
-			<PersentasePie percentage={19.05} />
-			<p class="mt-5 text-2xl md:text-3xl">
-				<span class="text-primary">Lulusan Primakara</span> menjadi pengusaha digital (technopreneur)
-			</p>
-		</div>
+		{
+			data.map((item: { value: number; description: string }) => (
+				<div class="w-75 md:w-80 2xl:w-100">
+					<PersentasePie percentage={item.value} />
+					<p class="mt-5 text-2xl md:text-3xl" set:html={item.description} />
+				</div>
+			))
+		}
 	</div>
-	<p class="mt-40">Sumber Tracer Study Tahun 2023</p>
+	<p class="mt-40">{info}</p>
 </div>

@@ -1,5 +1,5 @@
 ---
-import ProgramPendidikanCard from './ProgramPendidikanCard.astro'
+import programsPendidikanCard from './programsPendidikanCard.astro'
 import { Image } from 'astro:assets'
 
 type data = {
@@ -26,7 +26,7 @@ const { image, data, reverse = false, title } = Astro.props
 	<div class={`lg:w-1/2 p-5 ${reverse ? 'lg:pl-10' : 'lg:pr-10'}`}>
 		<h1 class="text-3xl font-semibold xl:text-4xl">{title}</h1>
 		<div class="mt-5 flex flex-col gap-3">
-			{data.map((e) => <ProgramPendidikanCard link={e.link}>{e.title}</ProgramPendidikanCard>)}
+			{data.map((e) => <programsPendidikanCard link={e.link}>{e.title}</programsPendidikanCard>)}
 		</div>
 	</div>
 </div>

@@ -4,7 +4,11 @@ import Title from '../UI/Title.astro'
 import ProgramPendidikanItem from './ProgramPendidikanItem.astro'
 import Informatika from '../../../public/images/informatika.jpg'
 import Bisnis from '../../../public/images/BISNIS.jpg'
-import { dataInformatika, dataBisnis } from '../Navbar/LinksData'
+import { getLocale } from 'astro-i18n-aut'
+import { loadTranslations } from '../../lib/i18n'
+
+const locale = getLocale(Astro.url)
+const { nav } = await loadTranslations(locale)
 ---
 
 <div class="globalLayout">
@@ -16,12 +20,12 @@ import { dataInformatika, dataBisnis } from '../Navbar/LinksData'
 		<ProgramPendidikanItem
 			title="FAKULTAS TEKNOLOGI INFORMASI DAN DESIGN"
 			image={Informatika}
-			data={dataInformatika}
+			data={nav.programs.informatika}
 		/>
 		<ProgramPendidikanItem
 			title="FAKULTAS EKONOMI DAN BISNIS"
 			image={Bisnis}
-			data={dataBisnis}
+			data={nav.programs.bisnis}
 			reverse={true}
 		/>
 	</div>

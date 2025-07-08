@@ -1,15 +1,20 @@
 ---
 import Button from './Button.astro'
 import { Phone, Mail, Instagram, Facebook, Youtube } from '@lucide/astro'
-import { dataInformatika, dataBisnis, desktopNav, addNav } from '../Navbar/LinksData'
 import PrimakaraLogo from '../../../public/images/primakara-logo-removebg-preview-text.png'
 import { Image } from 'astro:assets'
+import { loadTranslations } from '../../lib/i18n'
+import { getLocale } from 'astro-i18n-aut'
+import type { LinkType } from '../../types/types.ts'
+
+const locale = getLocale(Astro.url)
+const { nav, footer } = await loadTranslations(locale)
 ---
 
 <div class="bg-bg pt-20">
 	<div class="globalLayout grid grid-cols-2 gap-25 md:grid-cols-4">
 		<div class="">
-			<h1 class="text-xl font-bold">PRIMAKARA UNIVERSITY</h1>
+			<h1 class="text-xl font-bold">{footer.title1}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
 				<p class="">Jalan Tukad Badung No 135, Denpasar, Bali - 80226</p>
 				<Button>Lihat Maps</Button>
@@ -35,24 +40,24 @@ import { Image } from 'astro:assets'
 			</div>
 		</div>
 		<div class="">
-			<h1 class="text-xl font-bold">PROGRAM STUDI</h1>
+			<h1 class="text-xl font-bold">{footer.title2}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
 				<h1 class="text-slate-400">Fakultas Teknologi Informasi dan Desain</h1>
-				{dataInformatika.map((e) => <a href={e.link}>{e.title}</a>)}
+				{nav.programs.informatika.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 				<h1 class="mt-5 text-slate-400">Fakultas Teknologi Informasi dan Desain</h1>
-				{dataBisnis.map((e) => <a href={e.link}>{e.title}</a>)}
+				{nav.programs.bisnis.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 			</div>
 		</div>
 		<div class="">
-			<h1 class="text-xl font-bold">HALAMAN PENTING</h1>
+			<h1 class="text-xl font-bold">{footer.title3}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
-				{desktopNav.map((e) => <a href={e.link}>{e.title}</a>)}
+				{nav.desktop.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 			</div>
 		</div>
 		<div class="">
-			<h1 class="text-xl font-bold">LINK TERKAIT</h1>
+			<h1 class="text-xl font-bold">{footer.title4}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
-				{addNav.map((e) => <a href={e.link}>{e.title}</a>)}
+				{nav.addNav.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 			</div>
 		</div>
 	</div>

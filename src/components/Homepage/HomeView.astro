@@ -1,21 +1,25 @@
 ---
 import Button from '../UI/Button.astro'
+import { getLocale } from 'astro-i18n-aut'
+import { loadTranslations } from '../../lib/i18n'
+
+const locale = getLocale(Astro.url)
+const { home } = await loadTranslations(locale)
+const { title, subtitle, info, button } = home
 ---
 
 <div
 	class="globalLayout flex flex-col items-center justify-between gap-5 px-5 sm:px-15 md:flex-row md:gap-10 lg:gap-15 xl:gap-20"
 >
 	<div class="">
-		<h1 class="text-6xl font-semibold lg:text-7xl 2xl:text-8xl">
-			RAIH SUKSES <span class="text-primary">ERA DIGITAL</span>
-		</h1>
+		<h1 class="text-6xl font-semibold lg:text-7xl 2xl:text-8xl" set:html={title} />
 		<p class="mt-4 text-xl md:mt-6 md:mb-4 lg:text-2xl xl:mt-10 xl:text-3xl">
-			Di Kampus IT Terbaik se-Bali dan Nusa Tenggara
+			{subtitle}
 		</p>
 		<p class="mb-6 text-slate-500 md:mb-10 lg:text-xl xl:mb-14 xl:text-2xl">
-			Berdasarkan Pemeriksaan DISTI Tahun 2020
+			{info}
 		</p>
-		<Button>Selengkapnya</Button>
+		<Button>{button}</Button>
 	</div>
 
 	<div
