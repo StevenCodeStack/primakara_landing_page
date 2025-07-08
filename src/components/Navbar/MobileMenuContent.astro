@@ -3,6 +3,7 @@ import { ChevronRight } from '@lucide/astro'
 import { getLocale } from 'astro-i18n-aut'
 import { loadTranslations } from '../../lib/i18n'
 import type { LinkType } from '../../types/types'
+import LanguageSwitcher from '../UI/LanguageSwitcher.astro'
 
 const locale = getLocale(Astro.url)
 const { nav } = await loadTranslations(locale)
@@ -10,7 +11,7 @@ const { nav } = await loadTranslations(locale)
 
 <div
 	id="menuContent"
-	class="menuOpen hideScrollbar bg-secondary-bg absolute top-0 left-0 z-1 h-[100dvh] w-[100dvw] overflow-auto pt-20 text-white transition-all md:pt-25 lg:hidden"
+	class="menuOpen hideScrollbar bg-secondary-bg absolute top-0 left-0 z-1 h-[120dvh] w-[100dvw] overflow-auto pt-20 text-white transition-all md:pt-25 lg:hidden"
 >
 	<div class="grid grid-cols-1 px-5">
 		{
@@ -31,4 +32,5 @@ const { nav } = await loadTranslations(locale)
 			))
 		}
 	</div>
+	<LanguageSwitcher />
 </div>

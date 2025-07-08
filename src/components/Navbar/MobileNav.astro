@@ -5,7 +5,14 @@
 <script>
 	const menuButton = document.querySelector('.menu-toggle')
 	const content = document.querySelector('#menuContent')
+	const menu = document.getElementById('menuContent')
+
 	menuButton?.addEventListener('click', () => {
+		if (menu?.classList.contains('menuOpen')) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = ''
+		}
 		content?.classList.toggle('menuOpen')
 		menuButton.classList.toggle('active')
 	})

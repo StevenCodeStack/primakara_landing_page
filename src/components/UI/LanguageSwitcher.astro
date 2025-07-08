@@ -1,0 +1,46 @@
+---
+import { ChevronDown } from '@lucide/astro'
+import { getLocale } from 'astro-i18n-aut'
+
+// Supported languages
+const languages = [
+	{ code: 'id', name: 'Bahasa' },
+	{ code: 'en', name: 'English' }
+]
+
+// Get current language from URL
+const currentLocale = getLocale(Astro.url)
+---
+
+<div class="group relative w-fit">
+	<button class="flex items-center gap-2 rounded-lg px-3 py-2 transition-colors">
+		<span class="">{languages.find((l) => l.code === currentLocale)?.name}</span>
+		<ChevronDown size={16} />
+	</button>
+
+	<div
+		class="bg-white-bg invisible absolute left-0 z-50 mt-1 w-40 rounded-lg py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
+	>
+		{
+			languages
+				.filter((l) => l.code !== currentLocale)
+				.map((lang) => (
+					<a
+						href={`/${lang.code}${Astro.url.pathname.replace(/^\/[a-z]{2}\//, '/')}`}
+						class="flex items-center gap-3 px-4 py-2 hover:bg-white"
+					>
+						<span class="text-bg">{lang.name}</span>
+					</a>
+				))
+		}
+	</div>
+</div>
+
+<style>
+	.group:hover .group-hover\:visible {
+		visibility: visible;
+	}
+	.group:hover .group-hover\:opacity-100 {
+		opacity: 1;
+	}
+</style>

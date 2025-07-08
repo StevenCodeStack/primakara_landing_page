@@ -8,8 +8,12 @@
 	/* --color-white-bg: #cae7ff; */
 	--color-white-bg: #edfeff;
 }
+
+html {
+	scrollbar-color: #1dcad3 #021729;
+}
 body {
-	@apply bg-secondary-bg;
+	@apply bg-secondary-bg overflow-x-hidden;
 }
 
 .menuOpen {
