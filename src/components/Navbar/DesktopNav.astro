@@ -9,15 +9,29 @@ const locale = getLocale(Astro.url)
 const { nav } = await loadTranslations(locale)
 ---
 
-<div class="hidden items-center gap-6 lg:flex xl:gap-10">
+<div class="hidden items-center gap-8 lg:flex">
 	{
-		nav.desktop.map((e: LinkType) => (
-			<a href={e.link}>
-				<div class="flex items-center gap-1">
-					<h1 class="hoverNav text-sm text-nowrap 2xl:text-base">{e.title}</h1>
-					{e.children && <ChevronDown size={20} />}
-				</div>
-			</a>
+		nav.desktop.map((item: LinkType) => (
+			<div class="group relative">
+				<a href={item.link} class="hoverNav flex items-center gap-1 transition-colors">
+					<span class="text-sm 2xl:text-base">{item.title}</span>
+					{item.children && <ChevronDown size={20} class="opacity-70" />}
+				</a>
+
+				{/* Dropdown Menu */}
+				{item.children && (
+					<div class="invisible absolute top-full left-0 z-50 mt-1 w-48 rounded-md bg-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100">
+						{item.children.map((child) => (
+							<a
+								href={child.link}
+								class="hover:text-primary block px-4 py-2 text-gray-800 hover:bg-gray-100"
+							>
+								{child.title}
+							</a>
+						))}
+					</div>
+				)}
+			</div>
 		))
 	}
 	<a href="/" class="border-bg border-2 px-4 py-2 text-nowrap">{nav.button}</a>

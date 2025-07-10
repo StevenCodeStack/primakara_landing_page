@@ -2,14 +2,20 @@
 import HomeView from './HomeView.astro'
 import PersentaseView from './PersentaseView.astro'
 import AboutView from './AboutView.astro'
-import programsPendidikan from './programsPendidikan.astro'
+import ProgramPendidikan from './ProgramPendidikan.astro'
 import Footer from '../ui/Footer.astro'
+import Stories from './Stories.tsx'
+import { getLocale } from 'astro-i18n-aut'
+import { loadTranslations } from '../../lib/i18n'
+
+const locale = getLocale(Astro.url)
 ---
 
 <div class="mx-auto flex flex-col gap-40 text-white">
 	<HomeView />
 	<PersentaseView />
 	<AboutView />
-	<programsPendidikan></programsPendidikan>
+	<ProgramPendidikan />
+	<Stories client:load locale={locale} />
 	<Footer />
 </div>

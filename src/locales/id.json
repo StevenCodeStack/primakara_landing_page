@@ -77,6 +77,64 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque earum sint repudiandae cumque, totam nesciunt ea explicabo quisquam, deleniti a, nisi ad obcaecati facilis. Voluptates exercitationem sunt, blanditiis ad deleniti explicabo rerum reprehenderit debitis cumque unde perspiciatis praesentium impedit atque necessitatibus totam expedita consequuntur alias. Libero iusto doloribus ipsa officiis?",
 		"button": "Selengkapnya"
 	},
+	"stories": [
+		{
+			"images": "/images/orlando-nandito.jpg",
+			"name": "Orlando Nandito",
+			"role": "Founder Miracle Gates Entertainment",
+			"story": "Menjadi salah satu tenant pertama binaan Inkubator Bisnis Primakara, kini menjelma sebagai salah satu studio games terbesar di Infonesia dengan game andalan \"Battle of Guardians\".",
+			"year": "Sistem Informasi - 2014"
+		},
+		{
+			"images": "/images/eka-apriyanthi.jpg",
+			"name": "Eka Apriyanthi",
+			"role": "Founder Safaga Indonesia",
+			"story": "Sukses mendirikan sekolah perhotelan dan kapal pesiar sejak masih berkuliah dengan nama Safaga Indonesia, yang bergerak dalam bidang pendidikan industri pariwisata",
+			"year": "Sistem Informasi Akuntansi - 2018"
+		},
+		{
+			"images": "/images/dewa-gede-padma.jpg",
+			"name": "Dewa Gede Padma",
+			"role": "Founder Falala Chocolate",
+			"story": "Alumni Primakara yang mendirikan bisnis cokelat sejak berkuliah. Kini memiliki omzet ratusan juta rupiah dan 3 outlet di Bali",
+			"year": "Sistem Informasi - 2018"
+		},
+		{
+			"images": "/images/yudiantara-wijaya.png",
+			"name": "Yudiantara Wijaya",
+			"role": "Founder Nextap & Company",
+			"story": "Mempunyai visi membangun startup sejak SMK, kemudian mengenal Primakara dalam acara Gerakan Nasional 1000 Startup. Kini sukses mendirikan Nextap & Company yang bergerak di bidang web design and development",
+			"year": "Sistem Informasi - 2017"
+		},
+		{
+			"images": "/images/kadek-laba-subagia.jpeg",
+			"name": "Kadek Laba Subagia",
+			"role": "Software Engineer SIRCLO",
+			"story": "Sukses sebagai Software Engineer di SIRCLO, perusahaan e-commerce terkemuka di Indonesia yang membantu brand berjualan secara online.",
+			"year": "Informatika - 2019"
+		},
+		{
+			"images": "/images/panji-wijaksana.jpg",
+			"name": "Panji Wijaksana",
+			"role": "Fullstack Developer Resync Digital Selandia Baru",
+			"story": "Mencintai dunia programming, kini sukses besar berkarier id perusahaan yang menciptakan soluso web inovatif dan inspiratif",
+			"year": "Informatika - 2015"
+		},
+		{
+			"images": "/images/julio-vivaldi.jpg",
+			"name": "Julio Vivaldi",
+			"role": "Co-Founder Bakso Aci Kaget",
+			"story": "Sukses membangun usaha Bakso Aci Kaget, kini memiliki dua cabang yang tersebar di kota Surabaya dan Sidoarjo",
+			"year": "Informatika - 2015"
+		},
+		{
+			"images": "/images/nur-rohman-ashshiddiqy.jpg",
+			"name": "Nur Rohman Ashshiddiqy",
+			"role": "Coding Mentor Timedoor Academy & UI Design Freelancer",
+			"story": "Aktif sebagai Coding Mentor di Timedoor Academy, lembaga pelatihan pemrograman yang menginspirasi generasi muda melalui pendidikan yang mengasyikkan. Selain itu, Nur Rohman juga merupakan seorang freelancer dalam bidang desain UI.",
+			"year": "Sistem Informasi - 2017"
+		}
+	],
 	"footer": {
 		"title1": "PRIMAKARA UNIVERSITY",
 		"title2": "PROGRAM STUDI",

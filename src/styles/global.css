@@ -38,5 +38,5 @@ body {
 }
 
 .globalLayout {
-	@apply mx-auto max-w-350 px-5 lg:px-20;
+	@apply mx-auto w-full max-w-350 px-5 lg:px-20;
 }
