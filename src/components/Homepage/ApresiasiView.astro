@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import Title from "../UI/Title.astro";
+import HomeView from "./HomeView.astro";
+import ErickThohir from "/public/images/erick_thohir.png"
+import ProfH from "/public/images/prof_h_mohamad_nasir.png"
+import TetenM from "/public/images/teten_masduki.png"
+const data = [ 
+    {image:ErickThohir,content:"Saya Rasa apa yang dibuat oleh Primakara ini adalah inovasi yang luar biasa. Bagaimana sudah memikirkan era digitalisasi yang akan terus menjadi gelombang baru yang besar di mana Indonesia harus menang.",nama:"H. Erick Thohir,B.A., M.B.A",peran:"(Menteri Badan Usaha Milik Negara Republik Indonesia)",tanggal:"Tanggal Kunjungan 19 September 2021"},
+    {image:ProfH,content:"Saya Rasa apa yang dibuat oleh Primakara ini adalah inovasi yang luar biasa. Bagaimana sudah memikirkan era digitalisasi yang akan terus menjadi gelombang baru yang besar di mana Indonesia harus menang.",nama:"H. Erick Thohir,B.A., M.B.A",peran:"(Menteri Badan Usaha Milik Negara Republik Indonesia)",tanggal:"Tanggal Kunjungan 19 September 2021"},
+    {image:TetenM,content:"Saya Rasa apa yang dibuat oleh Primakara ini adalah inovasi yang luar biasa. Bagaimana sudah memikirkan era digitalisasi yang akan terus menjadi gelombang baru yang besar di mana Indonesia harus menang.",nama:"H. Erick Thohir,B.A., M.B.A",peran:"(Menteri Badan Usaha Milik Negara Republik Indonesia)",tanggal:"Tanggal Kunjungan 19 September 2021"}
+]
+
+---
+
+    <div class="bg-bg py-30">
+        <div class="globalLayout">
+            <Title>APRESIASI UNTUK <span class="text-primary">PRIMAKARA UNIVERSITY</span></Title>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            {data.map(e=>(
+                <div class="h-160 flex flex-col">
+                    <div class="relative w-full">
+                        <Image src={e.image} alt={""}  class="object-cover"/>
+                    </div>
+                    <div class="bg-secondary-bg flex flex-col justify-between flex-grow p-8 px-12">
+                        <p class="">"{e.content}"</p>
+                        <div class="text-sm flex flex-col gap-2">
+                            <p class="text-primary font-semibold">{e.nama}</p>
+                            <p>{e.peran}</p>
+                            <p class="opacity-75">{e.tanggal}</p>
+                        </div>
+                    </div>
+                </div>
+            ))}</div>
+        </div>
+    </div>
