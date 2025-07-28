@@ -1,0 +1,25 @@
+---
+import Button from "../UI/Button.astro"
+import Title from "../UI/Title.astro"
+
+const data = [
+    {title:"360 VIRTUAL TOUR", button:"Ikuti Virtual Tour"},
+    {title:"PENERIMAAN MAHASISWA", button:"Penerimaan"},
+    {title:"BERITA & KEGIATAN", button:"Lihat Berita"},
+]
+---
+<div class="globalLayout">
+    <Title>EXPLORE MORE <span class="text-primary">PRIMAKARA UNIVERSITY</span></Title>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-6">
+        {data.map(e=>(
+            <section class="flex flex-col items-center justify-center text-center py-14 bg-lighter-bg">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white max-w-[80%] h-15">
+                    {e.title}
+                </h2>
+                <Button class="mt-5">
+                    {e.button}
+                </Button>
+            </section>
+        ))}
+    </div>
+</div>

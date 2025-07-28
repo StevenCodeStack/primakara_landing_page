@@ -7,6 +7,7 @@ import Footer from '../ui/Footer.astro'
 import Stories from './Stories.tsx'
 import { getLocale } from 'astro-i18n-aut'
 import ApresiasiView from './ApresiasiView.astro'
+import ExploreView from './ExploreView.astro'
 
 
 const locale = getLocale(Astro.url)
@@ -19,5 +20,6 @@ const locale = getLocale(Astro.url)
 	<ProgramPendidikan />
 	<Stories client:load locale={locale} />
 	<ApresiasiView/>
+	<ExploreView/>
 	<Footer />
 </div>
