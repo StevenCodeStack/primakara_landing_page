@@ -1,86 +1,126 @@
 {
-	"nav": {
-		"desktop": [
-			{ "title": "Education", "link": "/pendidikan" },
-			{
-				"title": "About Us",
-				"link": "/tentang-kami",
-				"children": [
-					{ "title": "Facilities", "link": "/fasilitas" },
-					{ "title": "Organizational Structure", "link": "/struktur" }
-				]
-			},
-			{ "title": "Campus Life", "link": "/kampus" },
-			{ "title": "Research & Community Service", "link": "/riset" }
-		],
-		"mobile": [
-			{ "title": "Home", "link": "/" },
-			{ "title": "Education", "link": "/" },
-			{ "title": "About Us", "link": "/" },
-			{ "title": "Campus Life", "link": "/" },
-			{ "title": "Research & Community Service", "link": "/" },
-			{ "title": "Admission", "link": "/" }
-		],
-		"programs": {
-			"informatika": [
-				{ "title": "Informatics", "link": "/informatika" },
-				{ "title": "Information Systems", "link": "/sistem-informasi" },
-				{ "title": "Accounting Information Systems", "link": "/" },
-				{ "title": "Visual Communication Design", "link": "/" }
-			],
-			"bisnis": [
-				{ "title": "Accounting", "link": "/" },
-				{ "title": "Digital Business", "link": "/" },
-				{ "title": "Management", "link": "/" }
-			]
-		},
-		"addNav": [
-			{ "title": "Students", "link": "/" },
-			{ "title": "Facilities", "link": "/" },
-			{ "title": "News & Events", "link": "/" },
-			{ "title": "Contact", "link": "/" }
-		],
-		"button": "Acceptence"
-	},
-	"home": {
-		"title": "ACHIEVE SUCCESS IN THE <span class='text-primary'>DIGITAL ERA</span>",
-		"subtitle": "At the Best IT Campus in Bali and Nusa Tenggara",
-		"info": "Based on DISTI Inspection 2020",
-		"button": "Learn More"
-	},
-	"percentage": {
-		"title": "CERTAINTY OF THE <span class='text-primary'>FUTURE</span>",
-		"subtitle": "Remaining relevant as students amidst major changes due to the 4.0 industrial revolution and digital economy wave",
-		"data": [
-			{
-				"value": 94.8,
-				"description": "<span class='text-primary'>Primakara Graduates</span> work decently. Salary above 1.2 times Regional Minimum Wage"
-			},
-			{
-				"value": 77.75,
-				"description": "<span class='text-primary'>Primakara Graduates</span> work in their field of study"
-			},
-			{
-				"value": 69.2,
-				"description": "<span class='text-primary'>Primakara Graduates</span> were employed before graduation"
-			},
-			{
-				"value": 19.05,
-				"description": "<span class='text-primary'>Primakara Graduates</span> become digital entrepreneurs (technopreneurs)"
-			}
-		],
-		"info": "Source: 2023 Tracer Study"
-	},
-	"about": {
-		"title": "GET TO KNOW <span class='text-primary'>PRIMAKARA UNIVERSITY</span>",
-		"headline": "THE ONLY <span class='text-primary'>IT UNIVERSITY IN BALI</span>",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque earum sint repudiandae cumque, totam nesciunt ea explicabo quisquam, deleniti a, nisi ad obcaecati facilis. Voluptates exercitationem sunt, blanditiis ad deleniti explicabo rerum reprehenderit debitis cumque unde perspiciatis praesentium impedit atque necessitatibus totam expedita consequuntur alias. Libero iusto doloribus ipsa officiis?",
-		"button": "Learn More"
-	},
-	"footer": {
-		"title1": "PRIMAKARA UNIVERSITY",
-		"title2": "STUDY PROGRAMS",
-		"title3": "IMPORTANT PAGES",
-		"title4": "RELATED LINKS"
-	}
+  "nav": {
+    "desktop": [
+      { "title": "Education", "link": "/pendidikan" },
+      {
+        "title": "About Us",
+        "link": "/tentang-kami",
+        "children": [
+          { "title": "Facilities", "link": "/fasilitas" },
+          { "title": "Organizational Structure", "link": "/struktur" }
+        ]
+      },
+      { "title": "Campus Life", "link": "/kampus" },
+      { "title": "Research & Community Service", "link": "/riset" }
+    ],
+    "mobile": [
+      { "title": "Home", "link": "/" },
+      { "title": "Education", "link": "/" },
+      { "title": "About Us", "link": "/" },
+      { "title": "Campus Life", "link": "/" },
+      { "title": "Research & Community Service", "link": "/" },
+      { "title": "Admission", "link": "/" }
+    ],
+    "programs": {
+      "informatika": [
+        { "title": "Informatics", "link": "/informatika" },
+        { "title": "Information Systems", "link": "/sistem-informasi" },
+        { "title": "Accounting Information Systems", "link": "/" },
+        { "title": "Visual Communication Design", "link": "/" }
+      ],
+      "bisnis": [
+        { "title": "Accounting", "link": "/" },
+        { "title": "Digital Business", "link": "/" },
+        { "title": "Management", "link": "/" }
+      ]
+    },
+    "addNav": [
+      { "title": "Students", "link": "/" },
+      { "title": "Facilities", "link": "/" },
+      { "title": "News & Events", "link": "/" },
+      { "title": "Contact", "link": "/" }
+    ],
+    "button": "Acceptence"
+  },
+  "home": {
+    "title": "ACHIEVE SUCCESS IN THE <span class='text-primary'>DIGITAL ERA</span>",
+    "subtitle": "At the Best IT Campus in Bali and Nusa Tenggara",
+    "info": "Based on DISTI Inspection 2020",
+    "button": "Learn More"
+  },
+  "percentage": {
+    "title": "CERTAINTY OF THE <span class='text-primary'>FUTURE</span>",
+    "subtitle": "Remaining relevant as students amidst major changes due to the 4.0 industrial revolution and digital economy wave",
+    "data": [
+      {
+        "value": 94.8,
+        "description": "<span class='text-primary'>Primakara Graduates</span> work decently. Salary above 1.2 times Regional Minimum Wage"
+      },
+      {
+        "value": 77.75,
+        "description": "<span class='text-primary'>Primakara Graduates</span> work in their field of study"
+      },
+      {
+        "value": 69.2,
+        "description": "<span class='text-primary'>Primakara Graduates</span> were employed before graduation"
+      },
+      {
+        "value": 19.05,
+        "description": "<span class='text-primary'>Primakara Graduates</span> become digital entrepreneurs (technopreneurs)"
+      }
+    ],
+    "info": "Source: 2023 Tracer Study"
+  },
+  "about": {
+    "title": "GET TO KNOW <span class='text-primary'>PRIMAKARA UNIVERSITY</span>",
+    "headline": "THE ONLY <span class='text-primary'>IT UNIVERSITY IN BALI</span>",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque earum sint repudiandae cumque, totam nesciunt ea explicabo quisquam, deleniti a, nisi ad obcaecati facilis. Voluptates exercitationem sunt, blanditiis ad deleniti explicabo rerum reprehenderit debitis cumque unde perspiciatis praesentium impedit atque necessitatibus totam expedita consequuntur alias. Libero iusto doloribus ipsa officiis?",
+    "button": "Learn More"
+  },
+  "programPendidikan": {
+    "title": "<span class='text-primary'>PROGRAM</span> EDUCATION",
+    "subtitle": "Presenting 7 study programs with learning methods that are suitable for students",
+    "programTitles": [
+      "FACULTY OF INFORMATION TECHNOLOGY AND DESIGN",
+      "FACULTY OF ECONOMICS AND BUSINESS"
+    ],
+    "programTitlesLowerCase": [
+      "Faculty of Information Technology and Design",
+      "Faculty of Economics and Business"
+    ]
+  },
+  "apresiasi": {
+    "title": "APPRECIATION FOR <span class='text-primary'>PRIMAKARA UNIVERSITY</span>",
+    "data": [
+      {
+        "content": "I think what Primakara has done is an extraordinary innovation. They have already considered the digitalization era, which will continue to be a big new wave where Indonesia must prevail.",
+        "nama": "H. Erick Thohir, B.A., M.B.A",
+        "peran": "(Minister of State-Owned Enterprises of the Republic of Indonesia)",
+        "tanggal": "Visit Date: September 19, 2021"
+      },
+      {
+        "content": "I think what Primakara has done is an extraordinary innovation. They have already considered the digitalization era, which will continue to be a big new wave where Indonesia must prevail.",
+        "nama": "H. Erick Thohir, B.A., M.B.A",
+        "peran": "(Minister of State-Owned Enterprises of the Republic of Indonesia)",
+        "tanggal": "Visit Date: September 19, 2021"
+      },
+      {
+        "content": "I think what Primakara has done is an extraordinary innovation. They have already considered the digitalization era, which will continue to be a big new wave where Indonesia must prevail.",
+        "nama": "H. Erick Thohir, B.A., M.B.A",
+        "peran": "(Minister of State-Owned Enterprises of the Republic of Indonesia)",
+        "tanggal": "Visit Date: September 19, 2021"
+      }
+    ]
+  },
+
+  "footer": {
+    "titles": {
+      "title1": "PRIMAKARA UNIVERSITY",
+      "title2": "STUDY PROGRAMS",
+      "title3": "IMPORTANT PAGES",
+      "title4": "RELATED LINKS"
+    },
+    "map": "Look at Maps"
+  },
+  "whatsapp": "Chat with us"
 }

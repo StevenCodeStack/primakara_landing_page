@@ -8,16 +8,16 @@ import { getLocale } from 'astro-i18n-aut'
 import type { LinkType } from '../../types/types.ts'
 
 const locale = getLocale(Astro.url)
-const { nav, footer } = await loadTranslations(locale)
+const { nav, footer, programPendidikan } = await loadTranslations(locale)
 ---
 
 <div class="bg-bg pt-20">
 	<div class="globalLayout grid grid-cols-2 gap-25 md:grid-cols-4">
 		<div class="">
-			<h1 class="text-xl font-bold">{footer.title1}</h1>
+			<h1 class="text-xl font-bold">{footer.titles.title1}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
 				<p class="">Jalan Tukad Badung No 135, Denpasar, Bali - 80226</p>
-				<Button>Lihat Maps</Button>
+				<Button>{footer.map}</Button>
 				<div class="flex items-center gap-3">
 					<Phone />
 					<p>+62 361 895 6084</p>
@@ -40,22 +40,22 @@ const { nav, footer } = await loadTranslations(locale)
 			</div>
 		</div>
 		<div class="">
-			<h1 class="text-xl font-bold">{footer.title2}</h1>
+			<h1 class="text-xl font-bold">{footer.titles.title2}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
-				<h1 class="text-slate-400">Fakultas Teknologi Informasi dan Desain</h1>
+				<h1 class="text-slate-400">{programPendidikan.programTitlesLowerCase[0]}</h1>
 				{nav.programs.informatika.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
-				<h1 class="mt-5 text-slate-400">Fakultas Teknologi Informasi dan Desain</h1>
+				<h1 class="mt-5 text-slate-400">{programPendidikan.programTitlesLowerCase[1]}</h1>
 				{nav.programs.bisnis.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 			</div>
 		</div>
 		<div class="">
-			<h1 class="text-xl font-bold">{footer.title3}</h1>
+			<h1 class="text-xl font-bold">{footer.titles.title3}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
 				{nav.desktop.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 			</div>
 		</div>
 		<div class="">
-			<h1 class="text-xl font-bold">{footer.title4}</h1>
+			<h1 class="text-xl font-bold">{footer.titles.title4}</h1>
 			<div class="mt-8 flex flex-col gap-2 text-lg">
 				{nav.addNav.map((e: LinkType) => <a href={e.link}>{e.title}</a>)}
 			</div>
